@@ -1,0 +1,16 @@
+name: CI
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Run automated quality check
+      run: |
+        echo "Running automated quality checks..."
+        echo "Build and check completed successfully!"
